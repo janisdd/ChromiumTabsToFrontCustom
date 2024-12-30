@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "Tabs To Front Custom",
+  "version": "1.0.0",
+	"description": "Brings newly created tabs to the foreground and custom shortcuts",
+  "background": {
+    "service_worker": "scripts/service-worker.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://*/*", "http://*/*"],
+      "js": ["scripts/content-script.js"]
+    }
+  ]
+}

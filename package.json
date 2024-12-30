@@ -1,0 +1,14 @@
+{
+  "name": "BrowserTabToFrontCustom",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Janis Daniel Dähne <janisdd5566@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "watch": "tsc -w -p ."
+  },
+  "dependencies": {
+    "chrome-types": "^0.1.327",
+    "typescript": "^5.7.2"
+  }
+}
