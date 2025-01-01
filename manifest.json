@@ -11,5 +11,8 @@
       "matches": ["https://*/*", "http://*/*"],
       "js": ["scripts/content-script.js"]
     }
+  ],
+  "permissions": [
+    "windows"
   ]
 }

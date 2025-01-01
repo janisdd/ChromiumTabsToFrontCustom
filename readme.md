@@ -25,6 +25,8 @@ The current code adds a listener to all pages and checks to see if a link has be
 - `meta` + click on a link to open the tab not focused
   - `meta` key is `cmd` for mac
 
+- shrinks new windows (and initial) to 1280x800
+
 ## Add the extension to chromium based browsers
 
 - go to `Manage extensions`
