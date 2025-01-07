@@ -1,6 +1,7 @@
 /// <reference path="../node_modules/chrome-types/index.d.ts"/>
 
 //my arc seems buggy (alway opens windows at full screen size), set the new window size here
+//was only a temporary bug
 const config = {
 	initialSize: {
 		width: 1280,
@@ -53,31 +54,30 @@ chrome.runtime.onMessage.addListener((message: any, sender) => {
 	return true
 })
 
-// Add startup listener for initial window
-chrome.runtime.onStartup.addListener(async () => {
-  const windows = await chrome.windows.getAll();
-  for (const window of windows) {
-    if (window.id) {
-      chrome.windows.update(window.id, {
-        width: config.initialSize.width,
-        height: config.initialSize.height
-      });
-    }
-  }
-});
+// // Add startup listener for initial window
+// chrome.runtime.onStartup.addListener(async () => {
+//   const windows = await chrome.windows.getAll();
+//   for (const window of windows) {
+//     if (window.id) {
+//       chrome.windows.update(window.id, {
+//         width: config.initialSize.width,
+//         height: config.initialSize.height
+//       });
+//     }
+//   }
+// });
 
-// Add window creation listener
-chrome.windows.onCreated.addListener((window) => {
-	console.log("window created", window);
+// // Add window creation listener
+// chrome.windows.onCreated.addListener((window) => {
 	
-  chrome.windows.update(window.id!, {
-    width: config.initialSize.width,
-    height: config.initialSize.height
-  })
-	setTimeout(() => {
-		chrome.windows.update(window.id!, {
-			width: config.initialSize.width,
-			height: config.initialSize.height
-		})
-	}, 100)
-})
+//   chrome.windows.update(window.id!, {
+//     width: config.initialSize.width,
+//     height: config.initialSize.height
+//   })
+// 	setTimeout(() => {
+// 		chrome.windows.update(window.id!, {
+// 			width: config.initialSize.width,
+// 			height: config.initialSize.height
+// 		})
+// 	}, 100)
+// })
