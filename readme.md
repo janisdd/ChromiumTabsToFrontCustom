@@ -41,3 +41,13 @@ yarn install
 yarn watch
 ```
 
+### other stuff
+
+- `youtube.com` prevent `0-9` key from resetting video to `0:00` (0 is next to the right arrow key on some keyboards)
+
+https://www.reddit.com/r/youtube/comments/ae3vja/how_to_disable_keyboard_shortcuts/
+
+1. Download uBlock Origin Chrome extension
+2. Click dashboard button (far right)
+3. Click the "My Filters tab" and paste this filter: youtube.com##+js(addEventListener-defuser.js, keydown)
+4. Apply Changes
